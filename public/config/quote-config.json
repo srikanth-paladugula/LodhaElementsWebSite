@@ -1,0 +1,95 @@
+{
+  "company": {
+    "name": "Lodha Elements",
+    "tagline": "Interiors and Exteriors",
+    "phone": "+91 98765 00000",
+    "email": "studio@lodhaelements.com",
+    "address": "Mumbai, India"
+  },
+  "rateCard": {
+    "Box_Laminate": 1900,
+    "Box_Veneer": 2650,
+    "Box_Acrylic": 2500,
+    "Panel_Laminate": 800,
+    "Panel_Veneer": 1450,
+    "Panel_Acrylic": 1050,
+    "Frame_Laminate": 950,
+    "Frame_Veneer": 1750,
+    "Frame_Acrylic": 1300,
+    "Semi-Box_Laminate": 1550,
+    "Semi-Box_Veneer": 2200,
+    "Semi-Box_Acrylic": 1950,
+    "Profile Box_Laminate": 2250,
+    "Profile Box_Veneer": 2750,
+    "Profile Box_Acrylic": 2550 
+  },
+  "categories": ["Storage", "Display", "Ply", "PVD", "Slide"],
+  "components": [
+    "Wardrobe", "TV Unit", "Shoe Rack", "Crockery Unit", "Kitchen Cabinet",
+    "Vanity", "Study Table", "Bed", "Side Table", "Wall Panel",
+    "Pooja Unit", "Bar Unit", "Bookshelf", "Dresser",
+    "Partition", "Wall Decor", "Kitchen Counter Top", "Arch", "Island Unit", "Profile Cabinet", "Foldable Table"
+  ],
+  "structures": ["Box", "Panel", "Frame", "Semi-Box", "Profile Box", "D-Box"],
+  "finishes": ["Laminate", "Veneer", "Acrylic", "1.5mm Acrylic", "2mm Acrylic", "Duco", "PU", "CNC"],
+  "calcTypes": [
+    { "value": "AREA", "label": "Area (sqft)" },
+    { "value": "LENGTH", "label": "Running ft" },
+    { "value": "UNIT", "label": "Per Unit" },
+    { "value": "LUMPSUM", "label": "Lumpsum" }
+  ],
+  "coreMaterials": ["BWP Ply", "MR Ply", "HDHMR", "Particle Board", "Ply", "WPVC", "Boiler Sheet"],
+  "plywoodCompanies": ["Saburi", "Austin", "Century", "GreenPly", "Siamply", "Everest", "Dhonyi", "Kit Ply", "Duro"],
+  "finishMaterials": ["1mm Laminate", "0.8mm Laminate", "PU Paint", "Veneer", "Acrylic Sheet"],
+  "hardwareBrands": ["Hettich", "Hafele", "Ebco", "Godrej", "Doorset", "Nimmi", "Ozone"],
+  "projectTypes": ["Residential", "Commercial", "Villa", "Penthouse"],
+  "roomPresets": [
+    "Living Room", "Master Bedroom", "Guest Bedroom", "Kitchen",
+    "Dining Room", "Children's Room", "Pooja Room", "Home Office",
+    "Bathroom", "Entryway / Foyer", "Balcony"
+  ],
+  "componentPresets": {
+    "Wardrobe":           { "structure": "Box",         "depth": 24, "category": "Storage", "height": 84 },
+    "TV Unit":            { "structure": "Box",         "depth": 18, "category": "Display", "height": 48 },
+    "Wall Panel":         { "structure": "Panel",       "depth": 0,  "category": "Display", "height": 96 },
+    "Kitchen Cabinet":    { "structure": "Box",         "depth": 24, "category": "Storage", "height": 34 },
+    "Shoe Rack":          { "structure": "Box",         "depth": 14, "category": "Storage", "height": 36 },
+    "Study Table":        { "structure": "Frame",       "depth": 24, "category": "Storage", "height": 30 },
+    "Bed":                { "structure": "Box",         "depth": 78, "category": "Storage", "height": 18 },
+    "Pooja Unit":         { "structure": "Box",         "depth": 12, "category": "Display", "height": 72 },
+    "Bookshelf":          { "structure": "Box",         "depth": 12, "category": "Display", "height": 72 },
+    "Crockery Unit":      { "structure": "Box",         "depth": 18, "category": "Display", "height": 84 },
+    "Vanity":             { "structure": "Box",         "depth": 18, "category": "Storage", "height": 36 },
+    "Dresser":            { "structure": "Box",         "depth": 18, "category": "Storage", "height": 30 },
+    "Bar Unit":           { "structure": "Box",         "depth": 18, "category": "Storage", "height": 42 },
+    "Side Table":         { "structure": "Box",         "depth": 18, "category": "Storage", "height": 24 },
+    "Partition":          { "structure": "D-Box",       "depth": 12, "category": "Ply",     "height": 96 },
+    "Wall Decor":         { "structure": "Panel",       "depth": 0,  "category": "Display", "height": 48 },
+    "Kitchen Counter Top":{ "structure": "Box",         "depth": 24, "category": "Storage", "height": 34 },
+    "Arch":               { "structure": "Frame",       "depth": 6,  "category": "Display", "height": 84 },
+    "Island Unit":        { "structure": "Box",         "depth": 30, "category": "Storage", "height": 36 },
+    "Profile Cabinet":    { "structure": "Profile Box", "depth": 18, "category": "Storage", "height": 72 },
+    "Foldable Table":     { "structure": "Frame",       "depth": 24, "category": "Storage", "height": 30 }
+  },
+  "defaults": {
+    "materials": {
+      "core": "BWP Ply",
+      "plywoodCompany": "Saburi",
+      "hardware": "Hettich"
+    },
+    "pricing": {
+      "gstPercent": 18,
+      "discount": 0
+    },
+    "terms": {
+      "paymentSlabs": "50% Advance | 40% on Material Delivery | 10% on Completion",
+      "warranty": "10 years on structure, 1 year on finish",
+      "exclusions": "Electrical, plumbing, civil work, appliances"
+    },
+    "validityDays": 15
+  },
+  "pdf": {
+    "styles": "*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: 'Inter', system-ui, sans-serif; color: #2C2C2C; padding: 32px; font-size: 12px; line-height: 1.5; } .pdf-page { border: 2px solid #E8DFD0; padding: 28px; } h1, h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300; } h1 { font-size: 28px; margin-bottom: 4px; } h2 { font-size: 18px; margin: 24px 0 12px; border-bottom: 2px solid #2C2C2C; padding-bottom: 6px; font-weight: 500; color: #2C2C2C; } table { width: 100%; border-collapse: collapse; margin-bottom: 12px; margin-top: 8px; } th, td { border: 1px solid #E8DFD0; padding: 4px 8px; text-align: left; font-size: 11px; } th { background: #F5F0E8; font-weight: 600; text-transform: uppercase; font-size: 9px; letter-spacing: 0.05em; } .text-right { text-align: right; } .terms { font-size: 11px; color: #9E9082; margin-top: 16px; } .sig-line { width: 200px; border-top: 1px solid #2C2C2C; margin-top: 60px; padding-top: 4px; font-size: 10px; }",
+    "pageBreakBeforeRoom": false
+  }
+}
