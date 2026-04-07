@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
-import html2pdf from 'html2pdf.js'
 import {
   loadConfig,
   createQuote, createRoom, createItem, createAddon,
@@ -149,6 +148,7 @@ export default function QuoteBuilderPage() {
     if (!el) return
     setExporting(true)
     try {
+      const { default: html2pdf } = await import('html2pdf.js')
       await html2pdf()
         .set({
           margin: [15, 10, 15, 10],

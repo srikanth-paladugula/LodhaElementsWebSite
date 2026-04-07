@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
-import HomePage from './pages/HomePage'
-import QuotePage from './pages/QuotePage'
-import QuoteBuilderPage from './pages/QuoteBuilderPage'
 import { useScrollReveal } from './hooks/useScrollReveal'
+
+const HomePage = lazy(() => import('./pages/HomePage'))
+const QuotePage = lazy(() => import('./pages/QuotePage'))
+const QuoteBuilderPage = lazy(() => import('./pages/QuoteBuilderPage'))
 
 /* Scroll to top on route change */
 function ScrollReset() {
@@ -41,13 +42,15 @@ function AppShell() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        <Routes>
-          <Route path="/"             element={<HomePage />} />
-          <Route path="/quote"        element={<QuotePage />} />
-          <Route path="/quote-builder" element={<QuoteBuilderPage />} />
-          {/* Catch-all: redirect unknown routes back to Home */}
-          <Route path="*"             element={<HomePage />} />
-        </Routes>
+        <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh]">Loading…</div>}>
+          <Routes>
+            <Route path="/"             element={<HomePage />} />
+            <Route path="/quote"        element={<QuotePage />} />
+            <Route path="/quote-builder" element={<QuoteBuilderPage />} />
+            {/* Catch-all: redirect unknown routes back to Home */}
+            <Route path="*"             element={<HomePage />} />
+          </Routes>
+        </Suspense>
       </main>
       {!isBuilder && <Footer />}
     </div>
