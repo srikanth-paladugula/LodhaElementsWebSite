@@ -52,7 +52,7 @@ export default function ImageMarquee() {
             >
               <img
                 src={src}
-                alt=""
+                alt={`Interior design inspiration ${(i % IMAGES.length) + 1}`}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-[1.2s] ease-luxury group-hover:scale-105"
               />
